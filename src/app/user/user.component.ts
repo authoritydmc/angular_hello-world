@@ -37,7 +37,7 @@ export class USERComponent implements OnInit {
     }else if (this.USERS.includes(this.username) )
     {
       this.shouldRegister=false;
-      alert("User Aleady Exist");
+    
       this.msg='Error: User Already Exists. Can not use it ';
     }
     else

@@ -16,7 +16,7 @@
 <div class='users'>
     Users - List
     <ul *ngFor='let user of USERS'>
-<li>{{user}}</li>
+<li [style.color]='user===username?"red":"black"'>{{user}}</li>
     </ul>
 </div>
 </div>
