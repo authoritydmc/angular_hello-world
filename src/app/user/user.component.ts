@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class USERComponent implements OnInit {
   username:String='';
+  USERS:Array<String>=['admin','raj','kaj'];
   shouldRegister:Boolean=false;
+  msg:String='';
   constructor() { }
 
   ngOnInit(): void {
@@ -16,11 +18,13 @@ export class USERComponent implements OnInit {
   reg()
   {
     alert("Registering"); 
+    this.USERS.push(this.username);
+    this.msg="Users Registered";
   }
   validate()
   {
     this.shouldRegister=false;
-    alert("Validating->"+this.username);
+    this.msg='Validating '+this.username;
 
     // if userName is empty
     if(this.username=='')
@@ -29,11 +33,19 @@ export class USERComponent implements OnInit {
     {
       alert("minimum length is 6");
 
+    }else if (this.USERS.includes(this.username) )
+    {
+      this.shouldRegister=false;
+      alert("User Aleady Exist");
+      this.msg='Error:User Already Exists. Can not use it ';
     }
     else
     {
       this.shouldRegister=true;
-      alert("Validate Successful,Enabling Register button");
+      this.msg='Validate Successful,Enabling Register button';
+    
+      
+      
     }
 
     
