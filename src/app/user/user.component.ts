@@ -20,6 +20,7 @@ export class USERComponent implements OnInit {
     alert("Registering"); 
     this.USERS.push(this.username);
     this.msg="Users Registered";
+    this.username='';
   }
   validate()
   {
@@ -28,10 +29,10 @@ export class USERComponent implements OnInit {
 
     // if userName is empty
     if(this.username=='')
-    alert("Empty Username exiting");
+    this.msg='Error:Username is empty.';
     else if (this.username.length<6)
     {
-      alert("minimum length is 6");
+      this.msg='Error:minimum length is 6';
 
     }else if (this.USERS.includes(this.username) )
     {
