@@ -9,7 +9,7 @@
 
 {{username}} Current length of username-{{username.length}}
 
-<div class='err'>
+<div class='err'[style.color]='msg.includes("Error")?"red":"green"'>
     {{msg}}
 </div>
 

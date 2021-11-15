@@ -29,16 +29,16 @@ export class USERComponent implements OnInit {
 
     // if userName is empty
     if(this.username=='')
-    this.msg='Error:Username is empty.';
+    this.msg='Error: Username is empty.';
     else if (this.username.length<6)
     {
-      this.msg='Error:minimum length is 6';
+      this.msg='Error: minimum length is 6';
 
     }else if (this.USERS.includes(this.username) )
     {
       this.shouldRegister=false;
       alert("User Aleady Exist");
-      this.msg='Error:User Already Exists. Can not use it ';
+      this.msg='Error: User Already Exists. Can not use it ';
     }
     else
     {
