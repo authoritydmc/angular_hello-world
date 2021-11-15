@@ -1,4 +1,4 @@
-<p>user works!</p>
+<div class="main">
 <input type="text" [(ngModel)]='username' (change)="validate()">
 <br>
 <br>
@@ -9,6 +9,15 @@
 
 {{username}} Current length of username-{{username.length}}
 
-<div>
+<div class='err'>
     {{msg}}
 </div>
+
+<div class='users'>
+    Users - List
+    <ul *ngFor='let user of USERS'>
+<li>{{user}}</li>
+    </ul>
+</div>
+</div>
+

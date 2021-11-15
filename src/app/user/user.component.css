@@ -1,0 +1,10 @@
+.err
+{
+    border: 1 px solid red;
+    margin: 20px;;
+}
+.main
+{
+    padding: 50px;
+    align-items: center;
+}
