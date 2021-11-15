@@ -1,0 +1,10 @@
+<p>user works!</p>
+<input type="text" [(ngModel)]='username' (change)="validate()">
+<br>
+<br>
+
+<button (click)='reg()' [disabled]='!shouldRegister '>
+    Register
+</button>
+
+{{username}} Current length of username-{{username.length}}
