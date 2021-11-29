@@ -1,11 +1,9 @@
-.err
-{
-    border: 1 px solid red;
-    margin: 20px;;
-    color:red;
+.err {
+  border: 1 px solid red;
+  margin: 20px;
+  color: red;
 }
-.main
-{
-    padding: 50px;
-    align-items: center;
+.main {
+  padding: 50px;
+  align-items: center;
 }

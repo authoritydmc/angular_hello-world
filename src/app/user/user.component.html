@@ -1,24 +1,47 @@
 <div class="main">
-    Name:
-<input type="text" [(ngModel)]='username' (change)="validate()">
-<br>
-<br>
+  Name:
+  <input
+    type="text"
+    [(ngModel)]="username"
+    (change)="validate()"
+    placeholder="Enter username#"
+  />
+  <br />
+  <br />
 
-<button (click)='reg()' [disabled]='!shouldRegister '>
-    Register
-</button>
-<br>
- Current length ->{{username.length}}
+  <button (click)="reg()" [disabled]="!shouldRegister">Register</button>
+  <br />
+  Current length ->{{ username.length }}
 
-<div class='err'[style.color]='msg.includes("Error")?"red":"green"'>
-    {{msg}}
-</div>
 
-<div class='users'>
+  <div class="err" [style.color]="msg.includes('Error') ? 'red' : 'green'">
+    {{ msg }}
+  </div>
+
+  <div class="users">
     Users - List
-    <ul *ngFor='let user of USERS'>
-<li [style.color]='user===username?"red":"black"'>{{user}}</li>
+    <ul *ngFor="let user of USERS">
+      <li [style.color]="user === username ? 'red' : 'black'">{{ user }}</li>
     </ul>
-</div>
+  </div>
+  <div style="border: 1 px solid red;">
+<h3> Enter Text Here  </h3>
+    <textarea [(ngModel)]='test' style='  width: 700px;
+    height: 250px;' (ngModelChange)='fixCode()' >
+
+    </textarea>
+   <h4> Text</h4><p [innerHTML]='test'></p>
+   </div>
+  
+
+   <div>
+     <h4>Result</h4>
+    <p [innerHTML]="rslt"></p>
+    <br>
+    <h4>Raw Result</h4>
+    {{rslt}}
+   </div>
+
+
 </div>
 
